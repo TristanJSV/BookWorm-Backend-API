@@ -17,7 +17,7 @@ const corsOptions = {
     "http://localhost:8000",
     "http://localhost:4000",
     "http://localhost:3000",
-    // "https://writescape.vercel.app",
+    "https://book-worm-frontend-react.vercel.app/",
   ],
   credentials: true,
   optionsSuccessStatus: 200,
