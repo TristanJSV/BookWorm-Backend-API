@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "313782f5-7899-466e-9574-8dcae12a89b0",
+		"name": "BookWorm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24664487",
+		"_collection_link": "https://lunar-rocket-669603.postman.co/workspace/BookWorm~d6dbdf6b-e50f-48de-9b95-3765b4294734/collection/24664487-313782f5-7899-466e-9574-8dcae12a89b0?action=share&source=collection_link&creator=24664487"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Create Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2Q3MTAyZWM2NjE4YTQ2Y2VjMWVkNyIsImVtYWlsIjoibWFydGluQG1haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTc0MTUyNzk5OH0.QdLsCzAV57w8zzN33H-O6xRizfnoANj_-P7RCDY6tzI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"A Guest for Mr. Spider\",\r\n    \"author\": \"Robert Webley\",\r\n    \"isbn\": \"9782768734700\",\r\n    \"genre\": \"Children's\",\r\n    \"userId\": \"67cd7102ec6618a46cec1ed7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/books/addBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"books",
+								"addBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/books/getAllBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"books",
+								"getAllBooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2Q3MTAyZWM2NjE4YTQ2Y2VjMWVkNyIsImVtYWlsIjoibWFydGluQG1haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTc0MTUxNzA4MH0.1S-WMCK25oR6cYgu2szvtzGwiz0GytRse1ap9K4ro2g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"A Guest for Mr. Spider\",\r\n    \"author\": \"Jurgen Leitner\",\r\n    \"isbn\": \"9782768734700\",\r\n    \"genre\": \"Children's\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/books/updateBook/67cd7127ec6618a46cec1edb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"books",
+								"updateBook",
+								"67cd7127ec6618a46cec1edb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Books Created By a User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2Q3MTAyZWM2NjE4YTQ2Y2VjMWVkNyIsImVtYWlsIjoibWFydGluQG1haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTc0MTUyNjkxMX0.TlDsOrK7WerhmMcK1n1YGPJ2jPS9oqqRCK6RKj5tm80",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/books/getMyBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"books",
+								"getMyBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "Delete a Book",
+							"host": [
+								"Delete a Book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/books/getBook/67cd7127ec6618a46cec1edb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"books",
+								"getBook",
+								"67cd7127ec6618a46cec1edb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"martin@mail.com\",\r\n    \"username\": \"blackwood123\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"martin@mail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
